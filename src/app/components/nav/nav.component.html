@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">Home</a>
+      <div *ngIf="!authenticated">
+      <a class="navbar-brand" routerLink="/register">Register</a>
+      <a class="navbar-brand" routerLink="/login">Login</a>
+      </div> 
+      <div *ngIf="authenticated">
+      <a class="navbar-brand" (click)="logout()" routerLink="/login">Logout</a>
+      </div> 
+    </div>
+   
+  </nav>
